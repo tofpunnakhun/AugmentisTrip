@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  FriendsController.swift
 //  AugmentisTrip
 //
 //  Created by Punnakhun on 6/5/2560 BE.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FriendsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test")
+        
     }
 
     override func didReceiveMemoryWarning() {
