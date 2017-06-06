@@ -182,7 +182,7 @@
                                                         <constraint firstAttribute="width" constant="19" id="uhA-ch-yc7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-wA-pSH">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-wA-pSH">
                                                     <rect key="frame" x="45" y="8" width="322" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -191,11 +191,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ZoT-Pt-aMZ" firstAttribute="leading" secondItem="4Bl-bN-MQJ" secondAttribute="leading" constant="18" id="3Io-MV-SQd"/>
-                                                <constraint firstItem="5ed-wA-pSH" firstAttribute="centerX" secondItem="4Bl-bN-MQJ" secondAttribute="centerX" id="6cJ-1r-6gV"/>
-                                                <constraint firstItem="5ed-wA-pSH" firstAttribute="leading" secondItem="ZoT-Pt-aMZ" secondAttribute="trailing" constant="8" id="PON-es-XBg"/>
-                                                <constraint firstAttribute="trailing" secondItem="5ed-wA-pSH" secondAttribute="trailing" constant="8" id="QTp-7K-J9n"/>
+                                                <constraint firstAttribute="trailing" secondItem="5ed-wA-pSH" secondAttribute="trailing" constant="8" id="9Sp-wW-eIZ"/>
+                                                <constraint firstItem="5ed-wA-pSH" firstAttribute="top" secondItem="4Bl-bN-MQJ" secondAttribute="top" constant="8" id="X0p-xU-jHx"/>
                                                 <constraint firstItem="ZoT-Pt-aMZ" firstAttribute="top" secondItem="4Bl-bN-MQJ" secondAttribute="top" constant="12" id="YQ8-yR-q8r"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZoT-Pt-aMZ" secondAttribute="bottom" constant="12.5" id="d0R-yc-Xxn"/>
+                                                <constraint firstAttribute="bottom" secondItem="5ed-wA-pSH" secondAttribute="bottom" constant="5.5" id="nkU-BC-eJ4"/>
+                                                <constraint firstItem="5ed-wA-pSH" firstAttribute="leading" secondItem="ZoT-Pt-aMZ" secondAttribute="trailing" constant="8" id="sRg-Wb-Adb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
