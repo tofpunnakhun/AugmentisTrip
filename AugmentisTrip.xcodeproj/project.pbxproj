@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		47221B911EE557BB0082B9BA /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B901EE557BB0082B9BA /* MoreController.swift */; };
 		47221B931EE6AC160082B9BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47221B921EE6AC160082B9BA /* GoogleService-Info.plist */; };
+		47221B961EE7AB1D0082B9BA /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B951EE7AB1D0082B9BA /* FirebaseReference.swift */; };
+		47221B981EE7B4C70082B9BA /* FIRImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B971EE7B4C70082B9BA /* FIRImages.swift */; };
+		47221B9A1EE7D0700082B9BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B991EE7D0700082B9BA /* User.swift */; };
+		47221B9D1EE7E26F0082B9BA /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B9C1EE7E26F0082B9BA /* SignupTableViewController.swift */; };
+		47221B9F1EE801C90082B9BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221B9E1EE801C90082B9BA /* LoginViewController.swift */; };
 		4773A46F1EE538B500430D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A46E1EE538B500430D27 /* AppDelegate.swift */; };
 		4773A4711EE538B500430D27 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A4701EE538B500430D27 /* FriendsController.swift */; };
 		4773A4731EE538B500430D27 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A4721EE538B500430D27 /* EventsController.swift */; };
@@ -21,6 +26,11 @@
 /* Begin PBXFileReference section */
 		47221B901EE557BB0082B9BA /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		47221B921EE6AC160082B9BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		47221B951EE7AB1D0082B9BA /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		47221B971EE7B4C70082B9BA /* FIRImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRImages.swift; sourceTree = "<group>"; };
+		47221B991EE7D0700082B9BA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47221B9C1EE7E26F0082B9BA /* SignupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
+		47221B9E1EE801C90082B9BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4773A46B1EE538B500430D27 /* AugmentisTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentisTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4773A46E1EE538B500430D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4773A4701EE538B500430D27 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
@@ -60,8 +70,27 @@
 				4773A4701EE538B500430D27 /* FriendsController.swift */,
 				4773A4721EE538B500430D27 /* EventsController.swift */,
 				47221B901EE557BB0082B9BA /* MoreController.swift */,
+				47221B9E1EE801C90082B9BA /* LoginViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		47221B941EE7AB030082B9BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47221B951EE7AB1D0082B9BA /* FirebaseReference.swift */,
+				47221B971EE7B4C70082B9BA /* FIRImages.swift */,
+				47221B991EE7D0700082B9BA /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		47221B9B1EE7E1CD0082B9BA /* User Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				47221B9C1EE7E26F0082B9BA /* SignupTableViewController.swift */,
+			);
+			name = "User Authentication";
 			sourceTree = "<group>";
 		};
 		4773A4621EE538B500430D27 = {
@@ -86,6 +115,8 @@
 		4773A46D1EE538B500430D27 /* AugmentisTrip */ = {
 			isa = PBXGroup;
 			children = (
+				47221B9B1EE7E1CD0082B9BA /* User Authentication */,
+				47221B941EE7AB030082B9BA /* Model */,
 				47221B8F1EE557770082B9BA /* Controller */,
 				4773A46E1EE538B500430D27 /* AppDelegate.swift */,
 				4773A4741EE538B500430D27 /* Main.storyboard */,
@@ -230,10 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47221B9F1EE801C90082B9BA /* LoginViewController.swift in Sources */,
+				47221B961EE7AB1D0082B9BA /* FirebaseReference.swift in Sources */,
 				4773A4731EE538B500430D27 /* EventsController.swift in Sources */,
 				4773A46F1EE538B500430D27 /* AppDelegate.swift in Sources */,
 				47221B911EE557BB0082B9BA /* MoreController.swift in Sources */,
 				4773A4711EE538B500430D27 /* FriendsController.swift in Sources */,
+				47221B981EE7B4C70082B9BA /* FIRImages.swift in Sources */,
+				47221B9A1EE7D0700082B9BA /* User.swift in Sources */,
+				47221B9D1EE7E26F0082B9BA /* SignupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

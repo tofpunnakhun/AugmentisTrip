@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class FriendsController: UIViewController {
+    
+    let showLogin = "ShowLogin"
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // one time sign in
+        FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+            if user != nil {
+                
+            } else {
+                self.performSegue(withIdentifier: self.showLogin, sender: nil)
+            }
+        })
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,6 +24,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="qgb-g1-YgY"/>
+                    <connections>
+                        <segue destination="hLZ-rc-NwP" kind="presentation" identifier="ShowLogin" id="4CU-1u-OBK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,7 +35,7 @@
         <!--Create New Account-->
         <scene sceneID="Hem-QF-FAE">
             <objects>
-                <tableViewController id="VQd-nk-hAJ" sceneMemberID="viewController">
+                <tableViewController id="VQd-nk-hAJ" customClass="SignupTableViewController" customModule="AugmentisTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lO1-TR-TM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +58,9 @@
                                     <state key="normal" title="Change Profile Picture">
                                         <color key="titleColor" red="0.88584685330000001" green="0.59374457599999997" blue="0.2156447917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
+                                    <connections>
+                                        <action selector="changeProfileImageBtnPress:" destination="VQd-nk-hAJ" eventType="touchUpInside" id="uOu-65-2iT"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -217,6 +223,9 @@
                                                     <state key="normal" title="Create a new acoount">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="createNewAccountBtnPress:" destination="VQd-nk-hAJ" eventType="touchUpInside" id="31Z-r1-wAk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -238,6 +247,13 @@
                     <navigationItem key="navigationItem" title="Create New Account" id="U4d-sR-WUx">
                         <barButtonItem key="leftBarButtonItem" image="icon-back" id="vkZ-N3-Yav"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="2CL-ic-Kys" id="j2g-jQ-46s"/>
+                        <outlet property="fullnameTextField" destination="89c-Tg-lCh" id="7Cq-Zl-dIz"/>
+                        <outlet property="passwordTextField" destination="5ed-wA-pSH" id="o3t-vn-z6y"/>
+                        <outlet property="profileImageView" destination="mvn-tF-AKe" id="Knw-Op-395"/>
+                        <outlet property="usernameTextField" destination="2Cv-Qx-4MR" id="Bsu-4o-w8a"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAz-Tt-hGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,7 +375,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkh-CO-0oX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="-2105.3973013493255"/>
+            <point key="canvasLocation" x="2713" y="-2105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T2J-rP-MuH">
@@ -375,7 +391,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs2-7j-PVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="-2105"/>
+            <point key="canvasLocation" x="1687" y="-2105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VNw-44-LyU">
@@ -472,10 +488,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="xu3-US-lpg">
             <objects>
-                <viewController id="hLZ-rc-NwP" sceneMemberID="viewController">
+                <viewController id="hLZ-rc-NwP" customClass="LoginViewController" customModule="AugmentisTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D0b-Gx-R8B"/>
                         <viewControllerLayoutGuide type="bottom" id="q3l-wi-0Id"/>
