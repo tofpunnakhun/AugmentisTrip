@@ -12,8 +12,7 @@ import Firebase
 enum DatabaseReference {
     case root
     case users(uid: String)
-    
-    // MARK : Public
+    case allUser
     
     func reference() -> FIRDatabaseReference {
         switch self {
@@ -34,6 +33,8 @@ enum DatabaseReference {
             return ""
         case .users(let uid):
             return "users/\(uid)"
+        case .allUser:
+            return "users"
         }
     }
 }
@@ -63,5 +64,4 @@ enum StorageReference {
             return "profileImages"
         }
     }
-    
 }

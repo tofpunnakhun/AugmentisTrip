@@ -15,6 +15,7 @@ class FIRImages {
     var downloadURL: URL?
     var downloadURLString: String!
     var ref: FIRStorageReference!
+    var profileImageURL: String!
     
     init(image: UIImage) {
         self.image = image
@@ -24,11 +25,12 @@ class FIRImages {
         let resizeImage = image.resize()
         if let imageData = UIImageJPEGRepresentation(resizeImage, 0.9) {
             // get the reference
-            ref = StorageReference.profileImages.reference().child(userUID)
+            ref = StorageReference.profileImages.reference().child("\(userUID).png")
             downloadURLString = ref.description
             
             // save the data to the reference
             ref.put(imageData, metadata: nil, completion: { (metaData, error) in
+                self.profileImageURL = metaData?.downloadURL()?.absoluteString
                 completion(error)
             })
         }

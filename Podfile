@@ -11,4 +11,9 @@ target 'AugmentisTrip' do
   pod 'Firebase/Storage’
   pod 'Firebase/Core'
 
+  # Google Places API
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+
 end
