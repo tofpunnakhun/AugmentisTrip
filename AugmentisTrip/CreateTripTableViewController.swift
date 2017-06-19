@@ -9,15 +9,79 @@
 import UIKit
 import GooglePlaces
 
-class CreateTripTableViewController: UITableViewController {
+class CreateTripTableViewController: UITableViewController{
     
+    var memberFromInviteController =  [String]()
+    
+    @IBOutlet weak var tripNameTextField: UITextField!
+    @IBOutlet weak var tripDetailTextField: UITextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var timeTextField: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToolBar()
     }
+    
+    @IBAction func createTripBtnPressed(_ sender: Any) {
+        
+        if tripNameTextField.text == "" {
+            showErrorInputAlert(message: "Event Name")
+        } else if tripDetailTextField.text == "" {
+            showErrorInputAlert(message: "Event Detail")
+        } else if locationButton.currentTitle == "Select Location" {
+            showErrorInputAlert(message: "Location")
+        } else if startDateTextField.text == "" {
+            showErrorInputAlert(message: "Start Date")
+        } else if endDateTextField.text == "" {
+            showErrorInputAlert(message: "End Date")
+        } else if timeTextField.text == "" {
+            showErrorInputAlert(message: "Time")
+        } else {
+            let eventName = tripNameTextField.text!
+            let detail = tripDetailTextField.text!
+            let location = locationButton.currentTitle!
+            let startDate = startDateTextField.text!
+            let endDate = endDateTextField.text!
+            let time = timeTextField.text!
+            
+            let event = Event(eventName: eventName, detail: detail, location: location, startDate: startDate, endDate: endDate, time: time)
+            let inviteVC = storyboard?.instantiateViewController(withIdentifier: "AddMemberViewController") as! AddMemberViewController
+            inviteVC.event = event
+            navigationController?.pushViewController(inviteVC, animated: true)
+            
+//            event.save()
+//            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func showErrorInputAlert(message: String) {
+        let alert = UIAlertController(title: "Can't Sign up", message: "Please input \(message)", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func textFieldEditing(_ sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.time
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(self.timePickerValueChanged), for: UIControlEvents.valueChanged)
+    }
+    
+    func timePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        timeTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
     
     @IBAction func startDateTextFieldEditing(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
@@ -47,6 +111,7 @@ class CreateTripTableViewController: UITableViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         endDateTextField.text = dateFormatter.string(from: sender.date)
+        
     }
     
     func setupToolBar(){
@@ -62,24 +127,25 @@ class CreateTripTableViewController: UITableViewController {
         label.font = UIFont(name: "Helvetica", size: 12)
         label.backgroundColor = UIColor.clear
         label.textColor = UIColor.white
-        label.text = "Select a Start date"
+
         label.textAlignment = NSTextAlignment.center
         let textBtn = UIBarButtonItem(customView: label)
         toolBar.setItems([flexSpace,textBtn,flexSpace,okBarBtn], animated: true)
         startDateTextField.inputAccessoryView = toolBar
         endDateTextField.inputAccessoryView = toolBar
+        timeTextField.inputAccessoryView = toolBar
 
     }
     
     func donePressed(_ sender: UIBarButtonItem) {
         startDateTextField.resignFirstResponder()
         endDateTextField.resignFirstResponder()
+        timeTextField.resignFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     
     @IBAction func locationBtnPressed(_ sender: Any) {
         let acController = GMSAutocompleteViewController()
@@ -92,10 +158,8 @@ extension CreateTripTableViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        startDateTextField.text = place.name
+        locationButton.setTitle(place.name, for: .normal)
         print("Place name: \(place.name)")
-        print("Place address: \(String(describing: place.formattedAddress))")
-        print("Place attributions: \(String(describing: place.attributions))")
         dismiss(animated: true, completion: nil)
     }
     

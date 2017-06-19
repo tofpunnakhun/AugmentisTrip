@@ -20,10 +20,17 @@
 		47221BAF1EED66970082B9BA /* StaffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221BAE1EED66970082B9BA /* StaffCell.swift */; };
 		47221BB11EEE67C90082B9BA /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221BB01EEE67C90082B9BA /* TextField.swift */; };
 		47221BB31EEE900C0082B9BA /* CreateTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47221BB21EEE900C0082B9BA /* CreateTripTableViewController.swift */; };
+		4759439C1EF7798800DA9CAD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759439B1EF7798800DA9CAD /* Event.swift */; };
+		4759439E1EF79E9A00DA9CAD /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759439D1EF79E9A00DA9CAD /* EventViewController.swift */; };
+		475943A01EF7A18500DA9CAD /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759439F1EF7A18500DA9CAD /* EventCell.swift */; };
+		475943A21EF7C05A00DA9CAD /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943A11EF7C05A00DA9CAD /* AddMemberViewController.swift */; };
+		475943A61EF7D49F00DA9CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475943A51EF7D49F00DA9CAD /* Main.storyboard */; };
+		475943A81EF7DE7200DA9CAD /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943A71EF7DE7200DA9CAD /* MemberCell.swift */; };
+		475943AA1EF828F900DA9CAD /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943A91EF828F900DA9CAD /* EventDetailViewController.swift */; };
+		475943AC1EF83FC500DA9CAD /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943AB1EF83FC500DA9CAD /* ChatTableViewCell.swift */; };
+		475943AE1EF8402200DA9CAD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943AD1EF8402200DA9CAD /* Chat.swift */; };
 		4773A46F1EE538B500430D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A46E1EE538B500430D27 /* AppDelegate.swift */; };
 		4773A4711EE538B500430D27 /* StaffController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A4701EE538B500430D27 /* StaffController.swift */; };
-		4773A4731EE538B500430D27 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4773A4721EE538B500430D27 /* EventsController.swift */; };
-		4773A4761EE538B500430D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4773A4741EE538B500430D27 /* Main.storyboard */; };
 		4773A4781EE538B500430D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4773A4771EE538B500430D27 /* Assets.xcassets */; };
 		4773A47B1EE538B500430D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4773A4791EE538B500430D27 /* LaunchScreen.storyboard */; };
 		CF9AC6F00FE13C9192BBCE92 /* Pods_AugmentisTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6272D6F0966BE81DFBC9D79B /* Pods_AugmentisTrip.framework */; };
@@ -43,11 +50,18 @@
 		47221BAE1EED66970082B9BA /* StaffCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffCell.swift; sourceTree = "<group>"; };
 		47221BB01EEE67C90082B9BA /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		47221BB21EEE900C0082B9BA /* CreateTripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTripTableViewController.swift; sourceTree = "<group>"; };
+		4759439B1EF7798800DA9CAD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4759439D1EF79E9A00DA9CAD /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		4759439F1EF7A18500DA9CAD /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		475943A11EF7C05A00DA9CAD /* AddMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		475943A51EF7D49F00DA9CAD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		475943A71EF7DE7200DA9CAD /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		475943A91EF828F900DA9CAD /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		475943AB1EF83FC500DA9CAD /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		475943AD1EF8402200DA9CAD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		4773A46B1EE538B500430D27 /* AugmentisTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentisTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4773A46E1EE538B500430D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4773A4701EE538B500430D27 /* StaffController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffController.swift; sourceTree = "<group>"; };
-		4773A4721EE538B500430D27 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		4773A4751EE538B500430D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4773A4771EE538B500430D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4773A47A1EE538B500430D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4773A47C1EE538B500430D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,10 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				4773A4701EE538B500430D27 /* StaffController.swift */,
-				4773A4721EE538B500430D27 /* EventsController.swift */,
 				47221B9E1EE801C90082B9BA /* LoginViewController.swift */,
 				47221BA21EE9058A0082B9BA /* MoreTableViewController.swift */,
 				47221BB21EEE900C0082B9BA /* CreateTripTableViewController.swift */,
+				4759439D1EF79E9A00DA9CAD /* EventViewController.swift */,
+				475943A91EF828F900DA9CAD /* EventDetailViewController.swift */,
+				475943A11EF7C05A00DA9CAD /* AddMemberViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -94,6 +110,8 @@
 				47221B951EE7AB1D0082B9BA /* FirebaseReference.swift */,
 				47221B971EE7B4C70082B9BA /* FIRImages.swift */,
 				47221B991EE7D0700082B9BA /* User.swift */,
+				4759439B1EF7798800DA9CAD /* Event.swift */,
+				475943AD1EF8402200DA9CAD /* Chat.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -113,6 +131,9 @@
 				47221BA81EED5EE50082B9BA /* CircleImageView.swift */,
 				47221BAE1EED66970082B9BA /* StaffCell.swift */,
 				47221BB01EEE67C90082B9BA /* TextField.swift */,
+				4759439F1EF7A18500DA9CAD /* EventCell.swift */,
+				475943A71EF7DE7200DA9CAD /* MemberCell.swift */,
+				475943AB1EF83FC500DA9CAD /* ChatTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -153,9 +174,9 @@
 				47221BAA1EED5FE50082B9BA /* View */,
 				47221B8F1EE557770082B9BA /* Controller */,
 				4773A46E1EE538B500430D27 /* AppDelegate.swift */,
-				4773A4741EE538B500430D27 /* Main.storyboard */,
 				4773A4771EE538B500430D27 /* Assets.xcassets */,
 				4773A4791EE538B500430D27 /* LaunchScreen.storyboard */,
+				475943A51EF7D49F00DA9CAD /* Main.storyboard */,
 				4773A47C1EE538B500430D27 /* Info.plist */,
 			);
 			path = AugmentisTrip;
@@ -236,7 +257,7 @@
 				4773A47B1EE538B500430D27 /* LaunchScreen.storyboard in Resources */,
 				47221B931EE6AC160082B9BA /* GoogleService-Info.plist in Resources */,
 				4773A4781EE538B500430D27 /* Assets.xcassets in Resources */,
-				4773A4761EE538B500430D27 /* Main.storyboard in Resources */,
+				475943A61EF7D49F00DA9CAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,19 +316,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475943A81EF7DE7200DA9CAD /* MemberCell.swift in Sources */,
 				47221B9F1EE801C90082B9BA /* LoginViewController.swift in Sources */,
 				47221B961EE7AB1D0082B9BA /* FirebaseReference.swift in Sources */,
-				4773A4731EE538B500430D27 /* EventsController.swift in Sources */,
 				47221BB11EEE67C90082B9BA /* TextField.swift in Sources */,
 				4773A46F1EE538B500430D27 /* AppDelegate.swift in Sources */,
+				4759439C1EF7798800DA9CAD /* Event.swift in Sources */,
+				475943AA1EF828F900DA9CAD /* EventDetailViewController.swift in Sources */,
+				475943A01EF7A18500DA9CAD /* EventCell.swift in Sources */,
+				4759439E1EF79E9A00DA9CAD /* EventViewController.swift in Sources */,
 				47221BA91EED5EE50082B9BA /* CircleImageView.swift in Sources */,
 				47221BA31EE9058A0082B9BA /* MoreTableViewController.swift in Sources */,
 				47221BB31EEE900C0082B9BA /* CreateTripTableViewController.swift in Sources */,
 				47221BAF1EED66970082B9BA /* StaffCell.swift in Sources */,
 				47221BAD1EED61040082B9BA /* Constants.swift in Sources */,
+				475943A21EF7C05A00DA9CAD /* AddMemberViewController.swift in Sources */,
 				47221BA11EE80B7B0082B9BA /* LoginTableViewController.swift in Sources */,
 				4773A4711EE538B500430D27 /* StaffController.swift in Sources */,
+				475943AE1EF8402200DA9CAD /* Chat.swift in Sources */,
 				47221B981EE7B4C70082B9BA /* FIRImages.swift in Sources */,
+				475943AC1EF83FC500DA9CAD /* ChatTableViewCell.swift in Sources */,
 				47221B9A1EE7D0700082B9BA /* User.swift in Sources */,
 				47221B9D1EE7E26F0082B9BA /* SignupTableViewController.swift in Sources */,
 			);
@@ -316,14 +344,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4773A4741EE538B500430D27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4773A4751EE538B500430D27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4773A4791EE538B500430D27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

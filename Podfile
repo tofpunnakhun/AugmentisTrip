@@ -15,5 +15,8 @@ target 'AugmentisTrip' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
+  
+  # JSQMessages
+  pod 'JSQMessagesViewController'
 
 end

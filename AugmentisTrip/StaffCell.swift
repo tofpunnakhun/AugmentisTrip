@@ -11,7 +11,6 @@ import UIKit
 class StaffCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: CircleImageView!
-    
     @IBOutlet weak var staffNameLabel: UILabel!
     @IBOutlet weak var staffEmailLabel: UILabel!
     
@@ -50,5 +49,4 @@ class StaffCell: UITableViewCell {
             }
         }).resume()
     }
-
 }

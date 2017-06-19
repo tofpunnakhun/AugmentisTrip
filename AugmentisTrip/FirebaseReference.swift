@@ -13,6 +13,7 @@ enum DatabaseReference {
     case root
     case users(uid: String)
     case allUser
+    case event
     
     func reference() -> FIRDatabaseReference {
         switch self {
@@ -35,6 +36,8 @@ enum DatabaseReference {
             return "users/\(uid)"
         case .allUser:
             return "users"
+        case .event:
+            return "event"
         }
     }
 }
